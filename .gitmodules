@@ -1,0 +1,3 @@
+[submodule "elpa/hasktags-emacs"]
+	path = elpa/hasktags-emacs
+	url = git://github.com/ptek/hasktags-emacs.git
