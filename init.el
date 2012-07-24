@@ -48,6 +48,10 @@
     (setq indent-tabs-mode t)
     (setq tab-width 8)))
 
+; Shallow indentation in ruby
+(setq-default ruby-deep-indent-paren nil)
+(setq-default ruby-deep-indent-arglist nil)
+
 ;; ========== BUFFERS/DIRED =============
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
@@ -74,6 +78,8 @@
 ;(global-set-key (kbd "C-c C-r") 'revert-buffer)
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
+(global-unset-key (kbd "C-x C-b"))
+(global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 (global-set-key (kbd "<C-tab>") 'other-window)
 (put 'upcase-region 'disabled nil)
 
@@ -90,6 +96,7 @@
 
 (global-set-key (kbd "C-c w") 'delete-trailing-whitespace)
 (global-set-key (kbd "C-c e") 'toggle-noisy-whitespace)
+
 ;; (add-hook 'before-save-hook 'whitespace-cleanup)
 ;; (add-hook 'makefile-mode-hook (lambda() (remove-hook 'before-save-hook 'whitespace-cleanup))) ;; Do not clean up whitespaces for makefiles. It breaks them.
 
