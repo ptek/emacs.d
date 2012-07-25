@@ -48,10 +48,6 @@
     (setq indent-tabs-mode t)
     (setq tab-width 8)))
 
-; Shallow indentation in ruby
-(setq-default ruby-deep-indent-paren nil)
-(setq-default ruby-deep-indent-arglist nil)
-
 ;; ========== BUFFERS/DIRED =============
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
