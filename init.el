@@ -75,6 +75,7 @@
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 (global-unset-key (kbd "C-x C-b"))
+(global-unset-key (kbd "C-x m"))
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 (global-set-key (kbd "<C-tab>") 'other-window)
 (put 'upcase-region 'disabled nil)
