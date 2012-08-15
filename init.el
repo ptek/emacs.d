@@ -67,7 +67,7 @@
 (delete-selection-mode 1)
 (menu-bar-mode -1)
 (set-language-environment "UTF-8")
-
+(global-font-lock-mode -1)
 
 ;; ========== INPUT/CONTROL ============
 (fset 'yes-or-no-p 'y-or-n-p)
