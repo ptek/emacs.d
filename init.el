@@ -79,6 +79,7 @@
 (global-unset-key (kbd "C-x C-p"))
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 (global-set-key (kbd "<C-tab>") 'other-window)
+(global-set-key (kbd "M-n") 'other-window)
 (put 'upcase-region 'disabled nil)
 
 ;; === Clear trailing whitespace
