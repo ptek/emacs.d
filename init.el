@@ -57,7 +57,7 @@
 ;; ========== LOOK AND FEEL =============
 (setq inhibit-startup-message t)
 (global-font-lock-mode 1)
-(setq-default show-trailing-whitespace 't)
+setq-default show-trailing-whitespace 't)
 (setq scroll-step 1)
 (show-paren-mode t)
 (line-number-mode t)
@@ -79,7 +79,7 @@
 (global-unset-key (kbd "C-x C-p"))
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 (global-set-key (kbd "<C-tab>") 'other-window)
-(global-set-key (kbd "<f-3>") 'other-window)
+(global-set-key (kbd "<f3>") 'other-window)
 (put 'upcase-region 'disabled nil)
 
 ;; === Clear trailing whitespace
