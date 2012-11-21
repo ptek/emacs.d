@@ -57,7 +57,7 @@
 ;; ========== LOOK AND FEEL =============
 (setq inhibit-startup-message t)
 (global-font-lock-mode 1)
-setq-default show-trailing-whitespace 't)
+(setq-default show-trailing-whitespace 't)
 (setq scroll-step 1)
 (show-paren-mode t)
 (line-number-mode t)
