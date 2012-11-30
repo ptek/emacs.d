@@ -54,6 +54,9 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (kill-buffer "*scratch*")
 
+;; ========== Find File at Point (FFAP) ==
+(ffap-bindings)
+
 ;; ========== LOOK AND FEEL =============
 (setq inhibit-startup-message t)
 (global-font-lock-mode 1)
