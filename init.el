@@ -106,11 +106,8 @@
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; ========= Other functions ===
-(defun terminal ()
-  (interactive)
-  (ansi-term "/bin/bash" "ansi-term")
-  (toggle-noisy-whitespace))
-(global-set-key (kbd "M-RET") 'terminal)
+
+(global-set-key (kbd "M-RET") 'shell)
 
 (set-face-attribute  'mode-line
                  nil
