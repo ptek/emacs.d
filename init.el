@@ -81,7 +81,7 @@
 (global-unset-key (kbd "C-x m"))
 (global-unset-key (kbd "C-x C-p"))
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
-(global-set-key (kbd "C-x C-f") 'ffap-other-window)
+(global-set-key (kbd "C-c C-f") 'ffap-other-window)
 (global-set-key (kbd "<f3>") 'other-window)
 (put 'upcase-region 'disabled nil)
 
