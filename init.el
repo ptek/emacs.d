@@ -106,8 +106,12 @@
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; ========= Other functions ===
+(defun shell2 ()
+  (interactive)
+  (shell)
+  (buffer-disable-undo))
 
-(global-set-key (kbd "M-RET") 'shell)
+(global-set-key (kbd "M-RET") 'shell2)
 
 (set-face-attribute  'mode-line
                  nil
