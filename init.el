@@ -54,10 +54,13 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (kill-buffer "*scratch*")
 
+;; ========== Find File at Point (FFAP) ==
+(ffap-bindings)
+
 ;; ========== LOOK AND FEEL =============
 (setq inhibit-startup-message t)
 (global-font-lock-mode 1)
-setq-default show-trailing-whitespace 't)
+(setq-default show-trailing-whitespace 't)
 (setq scroll-step 1)
 (show-paren-mode t)
 (line-number-mode t)
@@ -79,6 +82,7 @@ setq-default show-trailing-whitespace 't)
 (global-unset-key (kbd "C-x C-p"))
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 (global-set-key (kbd "C-x C-o") 'other-window)
+(global-set-key (kbd "C-c f") 'ffap-other-window)
 (put 'upcase-region 'disabled nil)
 
 ;; === Clear trailing whitespace
@@ -102,11 +106,12 @@ setq-default show-trailing-whitespace 't)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 ;; ========= Other functions ===
-(defun terminal ()
+(defun shell2 ()
   (interactive)
-  (ansi-term "/bin/bash" "ansi-term")
-  (toggle-noisy-whitespace))
-(global-set-key (kbd "M-RET") 'terminal)
+  (shell)
+  (buffer-disable-undo))
+
+(global-set-key (kbd "M-RET") 'shell2)
 
 (set-face-attribute  'mode-line
                  nil
