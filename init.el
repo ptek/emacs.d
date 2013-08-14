@@ -47,7 +47,7 @@
   (lambda()
     (setq indent-tabs-mode t)
     (setq tab-width 8)))
-
+ 
 ;; ========== BUFFERS/DIRED =============
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
@@ -105,20 +105,18 @@
 ;; === Easy commenting/uncommenting
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
-;; ========= Other functions ===
+;; ========= Shell =====
 (defun shell2 ()
   (interactive)
   (shell)
   (buffer-disable-undo))
 
+(setq-default comint-scroll-show-maximum-output t) ; scroll to show max possible output
+(setq-default comint-completion-autolist t)        ; show completion list when ambiguous
+(setq-default comint-input-ignoredups t)           ; no duplicates in command history
+(setq-default comint-completion-addsuffix t)       ; insert space/slash after file completion
+
 (global-set-key (kbd "M-RET") 'shell2)
-
-(set-face-attribute  'mode-line
-                 nil
-                 :foreground "white"
-                 :background "black")
-
-(set-face-attribute  'mode-line-inactive
-                 nil
-                 :foreground "white"
-                 :background "black")
+(set-face-attribute  'mode-line nil :foreground "white" :background "black")
+(set-face-attribute  'mode-line-inactive nil :foreground "white" :background "black")
+(put 'downcase-region 'disabled nil)
