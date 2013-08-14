@@ -1,6 +1,7 @@
 ;; ========== LOADING/PATHS=============
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/plugins"))
 (add-to-list 'load-path "~/.emacs.d/elpa/hasktags-emacs")
+(autoload 'markdown-mode "markdown" "Major mode for editing Markdown files" t)
 (load "~/.emacs.d/elpa/haskell-mode/haskell-site-file")
 (load "hasktags")
 (require 'haskell-cabal)
@@ -24,12 +25,15 @@
 ;; ======== FILE EXTENSIONS =============
 (mapcar (lambda (pair)
     (add-to-list 'auto-mode-alist pair))
-        '(("Gemfile$"  . ruby-mode)
-          ("\\.rake$"  . ruby-mode)
-          ("Rakefile$" . ruby-mode)
-          ("\\.json$"  . js-mode)
-          ("\\.cabal$" . haskell-cabal-mode)))
-
+        '(("Gemfile$"     . ruby-mode)
+          ("\\.rake$"     . ruby-mode)
+          ("Rakefile$"    . ruby-mode)
+          ("\\.json$"     . js-mode)
+          ("\\.cabal$"    . haskell-cabal-mode)
+          ("CHANGELOG$"   . markdown-mode)
+          ("\\.text$"     . markdown-mode)
+          ("\\.markdown$" . markdown-mode)
+          ("\\.md$"       . markdown-mode)))
 
 ;; ========= TABS/INDENTATION ===========
 (setq-default tab-width 2)
